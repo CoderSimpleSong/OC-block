@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CViewController.h
 //  block
 //
 //  Created by 创联 on 2018/11/28.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CViewController : UIViewController
 
 @end
-
