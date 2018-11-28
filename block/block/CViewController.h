@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CViewController : UIViewController
+@property(strong,nonatomic)NSString *identify;
+
+@property(strong,nonatomic)void(^CBlock)(void);
 
 @end

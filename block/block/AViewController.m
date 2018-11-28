@@ -7,6 +7,7 @@
 //
 
 #import "AViewController.h"
+#import "BViewController.h"
 
 @interface AViewController ()
 
@@ -16,22 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor orangeColor];
+    UIButton *but = [UIButton buttonWithType:UIButtonTypeCustom];
+    [but setTitle:@"跳转到b" forState:UIControlStateNormal];
+    [but addTarget:self action:@selector(goBvc:) forControlEvents:UIControlEventTouchUpInside];
+    [but sizeToFit];
+    but.center = self.view.center;
+    
+    [self.view addSubview:but];
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)goBvc:(UIButton *)but{
+    BViewController *bvc = [[BViewController alloc]init];
+    [self.navigationController pushViewController:bvc animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

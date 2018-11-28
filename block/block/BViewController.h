@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BViewController : UIViewController
+@property(strong,nonatomic)NSString *identify;
 
 @end
